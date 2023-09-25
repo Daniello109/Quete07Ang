@@ -1,0 +1,15 @@
+{{developer1.lastname}} <br />
+{{developer1.firstname}} <br />
+{{developer1.age}} <br />
+{{developer1.gender}} <br /> 
+{{developer1.bio}} <br />
+
+
+
+<ng-container >
+    <app-skill-component *ngFor="let skill of developer1.skills" [skill]="skill"></app-skill-component>
+    <app-skill-component *ngFor="let skill of developer2.skills" [skill]="skill"></app-skill-component>
+
+</ng-container>
+<!-- con el ng for recorremos cada una de las skills del objeto developer
+Podemos darle cualquier nombre a [skill]. Lo importante es enlazarlo bien al atributo del objeto developer, y luego se lo pasaremos con el @input a la clase skills-->
